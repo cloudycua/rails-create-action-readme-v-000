@@ -230,3 +230,11 @@ Processing by PostsController#create as HTML
   [1m[36m (65.9ms)[0m  [1mcommit transaction[0m
 Redirected to http://165.227.90.214:50448/posts/5
 Completed 302 Found in 70ms (ActiveRecord: 66.4ms)
+
+
+Started GET "/posts/5" for 24.228.153.119 at 2018-09-06 20:55:14 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered posts/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 23ms (Views: 11.5ms | ActiveRecord: 0.2ms)
