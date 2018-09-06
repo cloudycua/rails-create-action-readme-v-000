@@ -220,3 +220,13 @@ Started GET "/posts/new" for 24.228.153.119 at 2018-09-06 20:55:04 +0000
 Processing by PostsController#new as HTML
   Rendered posts/new.html.erb within layouts/application (0.7ms)
 Completed 200 OK in 18ms (Views: 13.0ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/posts" for 24.228.153.119 at 2018-09-06 20:55:14 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GEwnoWZTL2N0dFgLK8Eis4RD3oXfB105yJzipTM4/ICc52KRcsyVwiKPbtcKFSYppCwhMAKDbol5L+2qHzmCLA==", "title"=>"title 3", "description"=>"desc 3", "commit"=>"Submit Post"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "title 3"], ["description", "desc 3"], ["created_at", "2018-09-06 20:55:14.803193"], ["updated_at", "2018-09-06 20:55:14.803193"]]
+  [1m[36m (65.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://165.227.90.214:50448/posts/5
+Completed 302 Found in 70ms (ActiveRecord: 66.4ms)
